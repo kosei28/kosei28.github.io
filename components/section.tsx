@@ -20,8 +20,8 @@ export const Section: React.FC<Props> = ({ children, id, title }) => {
       const headerTl = gsap.timeline({
         scrollTrigger: {
           trigger: header.current,
-          start: 'top 40%',
-          end: 'top 20%',
+          start: 'top 50%',
+          end: 'top 30%',
           scrub: true,
           pin: true,
         },
@@ -46,7 +46,7 @@ export const Section: React.FC<Props> = ({ children, id, title }) => {
             trigger: subSection,
             start: 'top 50%',
             end: 'top 40%',
-            scrub: true,
+            scrub: 1,
           },
         });
         subSectionTl.fromTo(
