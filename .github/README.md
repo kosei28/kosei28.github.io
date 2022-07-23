@@ -8,3 +8,4 @@ https://kosei28.github.io/
 
 - Next.js
 - Tailwind CSS
+- GSAP
