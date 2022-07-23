@@ -3,8 +3,8 @@ import { Icon } from '@iconify/react';
 
 export const Navigation: React.FC = () => {
   return (
-    <nav className="sticky top-0 z-10 mt-12 border-b bg-white px-4 py-3 sm:py-4">
-      <div className="mx-auto -mb-2 flex max-w-4xl flex-row items-baseline space-x-2 sm:space-x-4">
+    <nav className="fixed top-0 left-0 right-0 z-10 px-4 py-3 sm:py-4">
+      <div className="-mb-2 flex flex-row items-baseline space-x-2 sm:space-x-4">
         <div className="w-8 sm:w-12">
           <Avatar />
         </div>

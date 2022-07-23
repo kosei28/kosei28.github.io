@@ -3,5 +3,5 @@ type Props = {
 };
 
 export const Text: React.FC<Props> = ({ children }) => {
-  return <div className="flex flex-col space-y-2 text-xl">{children}</div>;
+  return <div className="flex flex-col space-y-6 text-xl">{children}</div>;
 };

@@ -1,9 +1,11 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import { Cover } from '../components/cover';
 import { Navigation } from '../components/navigation';
 import { Container } from '../components/container';
 import { Footer } from '../components/footer';
-import { H1, H2 } from '../components/headers';
+import { Section } from '../components/section';
+import { H2 } from '../components/header';
 import { Text } from '../components/text';
 import { WorkCard } from '../components/workCard';
 
@@ -16,12 +18,12 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <Cover />
+
       <Navigation />
 
       <Container>
-        <section id="about">
-          <H1>I am...</H1>
-          <H2>kosei28!!!</H2>
+        <Section id="about" title="I'm kosei28!!!">
           <Text>
             <p>
               プログラミングが好きな大学1年生。
@@ -34,39 +36,41 @@ const Home: NextPage = () => {
               Prisma + PlanetScale が好き。
             </p>
           </Text>
-        </section>
+        </Section>
 
-        <section id="philosophy">
-          <H1>Philosophy</H1>
-          <H2>アプリは UI / UX が命</H2>
-          <Text>
-            <p>
-              今まで、いろんなサービスやアプリを使ってきて感じたのは、自分が良いと感じるアプリは UI
-              / UX のデザインが最高にイケてるということ。 たとえ UI
-              が悪くても儲かってたとしても、ユーザーは良い体験を求めるし、開発者としてはユーザーに良い体験を提供したい。
-              それが結局ユーザーの評価になりアプリの未来になると思う。
-            </p>
-            <p>
-              でも、日本のアプリは UX が悪いものがとても多いと感じる。
-              そこが日本のソフトウェアの人材不足だけではない弱さでもあると思う。
-              ユーザー体験第一の開発をミッションに日本のソフトウェア開発の未来を創造していきたい。
-            </p>
-          </Text>
-          <H2>社会に足りないものを作る</H2>
-          <Text>
-            <p>
-              ものづくりには、需要があるからものを作る場合と、ものを作ってから需要を生み出す場合があると思う。
-              後者の場合は、潜在的な需要を見出す必要があるから、ビジネス的なセンスが必要だろうけど、前者の場合は作るべきものは簡単にわかるから、作るリソースさえあれば誰でもできる。
-            </p>
-            <p>
-              だけど、ソフトウェアの場合は需要があるけど供給が追いついていないものが、たくさんあるにもかかわらず、後者の方法で一発当てようとする人が多くいる気がする。
-              今ある課題を確実に解決して、社会をより良くしていくためにも、需要はあるのにまだ足りていないものを作っていきたい。
-            </p>
-          </Text>
-        </section>
+        <Section id="philosophy" title="Philosphy">
+          <div>
+            <H2>アプリは UI / UX が命</H2>
+            <Text>
+              <p>
+                今まで、いろんなサービスやアプリを使ってきて感じたのは、自分が良いと感じるアプリは
+                UI / UX のデザインが最高にイケてるということ。 たとえ UI
+                が悪くても儲かってたとしても、ユーザーは良い体験を求めるし、開発者としてはユーザーに良い体験を提供したい。
+                それが結局ユーザーの評価になりアプリの未来になると思う。
+              </p>
+              <p>
+                でも、日本のアプリは UX が悪いものがとても多いと感じる。
+                そこが日本のソフトウェアの人材不足だけではない弱さでもあると思う。
+                ユーザー体験第一の開発をミッションに日本のソフトウェア開発の未来を創造していきたい。
+              </p>
+            </Text>
+          </div>
+          <div>
+            <H2>社会に足りないものを作る</H2>
+            <Text>
+              <p>
+                ものづくりには、需要があるからものを作る場合と、ものを作ってから需要を生み出す場合があると思う。
+                後者の場合は、潜在的な需要を見出す必要があるから、ビジネス的なセンスが必要だろうけど、前者の場合は作るべきものは簡単にわかるから、作るリソースさえあれば誰でもできる。
+              </p>
+              <p>
+                だけど、ソフトウェアの場合は需要があるけど供給が追いついていないものが、たくさんあるにもかかわらず、後者の方法で一発当てようとする人が多くいる気がする。
+                今ある課題を確実に解決して、社会をより良くしていくためにも、需要はあるのにまだ足りていないものを作っていきたい。
+              </p>
+            </Text>
+          </div>
+        </Section>
 
-        <section id="works">
-          <H1>Works</H1>
+        <Section id="works" title="Works">
           <div className="flex flex-col space-y-4">
             <WorkCard
               name="Tab Space"
@@ -77,10 +81,9 @@ const Home: NextPage = () => {
               image="/works/tab-space/promotion.png"
             />
           </div>
-        </section>
+        </Section>
 
-        <section id="contact">
-          <H1>Contact</H1>
+        <Section id="contact" title="Contact">
           <Text>
             <p>お問い合わせは Twitter の DM よりお願いいたします。</p>
             <p>
@@ -95,7 +98,7 @@ const Home: NextPage = () => {
               </a>
             </p>
           </Text>
-        </section>
+        </Section>
       </Container>
 
       <Footer />
