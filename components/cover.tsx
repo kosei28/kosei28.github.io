@@ -61,6 +61,7 @@ export const Cover: React.FC = () => {
           scroll.current,
           {
             opacity: 1,
+            pointerEvents: 'auto',
             duration: 0.5,
           },
           '+=0.1'
@@ -73,13 +74,13 @@ export const Cover: React.FC = () => {
       className="absolute top-0 left-0 bottom-0 right-0 z-20 flex flex-col items-center justify-center bg-black text-white"
       ref={wrapper}
     >
-      <div className="flex flex-row space-x-4 overflow-hidden text-8xl" ref={message}>
+      <div className="mb-8 flex flex-row space-x-4 overflow-hidden pt-8 text-8xl" ref={message}>
         {'Hi!'.split('').map((char, index) => (
           <Char key={index}>{char}</Char>
         ))}
       </div>
       <div
-        className="absolute bottom-0 left-0 right-0 mb-8 flex flex-col items-center opacity-0"
+        className="pointer-events-none absolute bottom-0 left-0 right-0 mb-8 flex flex-col items-center opacity-0"
         ref={scroll}
       >
         <div className="text-2xl">Scroll</div>

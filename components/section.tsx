@@ -30,10 +30,12 @@ export const Section: React.FC<Props> = ({ children, id, title }) => {
         header.current,
         {
           opacity: 0,
+          pointerEvents: 'none',
           x: '-10%',
         },
         {
           opacity: 1,
+          pointerEvents: 'auto',
           x: '0%',
         }
       );
@@ -51,11 +53,13 @@ export const Section: React.FC<Props> = ({ children, id, title }) => {
           subSection,
           {
             opacity: 0,
+            pointerEvents: 'none',
             y: '20%',
           },
           {
             opacity: 1,
-            y: '0',
+            pointerEvents: 'auto',
+            y: '0%',
           }
         );
       });
